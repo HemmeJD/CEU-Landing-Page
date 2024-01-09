@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'Nexa';
+    src: url('./fonts/Nexa-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('./fonts/Nexa-Light.otf');
+    font-weight: light;
+    font-style: normal;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    font-family: 'Nexa', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 750px;
+    background: linear-gradient(129deg, #00548A 0%, #002C49 100%);
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.bg-logo {
+    background-image: url("./Images/Hero-Caremark.webp");
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    height: 750px;
+}
+
+.header img {
+    max-height: 100%;
+}
+
+.header-copy {
+    color: white;
+}
+
+.header-copy h1 {
+    font-size: 90px;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+.subheader {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 200;
+    margin-top: 10px;
+  color: white;
+}
+
+.header-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.cta-ceu {
+    width: 100%;
+    background-color: none;
+    text-decoration: none;
+}
+
+.link-ceu {
+    color: white;
+    font-family: "Nexa",sans-serif;
+    font-weight: light;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(white 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
+    transition: .4s, background-position 0s;
+    border: 2px solid white;
+}
+
+.link-ceu:hover {
+    --p: 100%;
+    cursor: pointer;
+    color:#00548a;
+    text-decoration: none;
+}
+
+.cta-ceu:hover {
+    text-decoration: none;
+}
+
+.gray-area {
+    background-color: #f6f6f6;
+    padding: 195px 0;
+}
+
+.sub-title {
+    color: #E54360;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.sub-copy {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 750px;
+}
+
+.img-container-hyper {
+    background-image: url('./Images/Hypertension-Course-Cover.webp');
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.img-container-ip {
+    background-image: url('./Images/IP-Course-Cover.webp');
+    background-size: cover;
+    background-position: left;
+    position: relative;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.red-overlay {
+    background: #E54360;
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .4s ease-in-out;
+}
+
+.overlay-right {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.img-container-hyper:hover .overlay-right {
+    opacity: 100;
+    width: 0;
+}
+
+.blue-overlay {
+    background: #63CBE8;
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .4s ease-in-out;
+}
+
+.overlay-left {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.img-container-ip:hover .overlay-left {
+    opacity: 100;
+    width: 0%;
+}
+
+.course-description-right {
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 60px 0px 60px 60px;
+}
+
+.course-description-left {
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 60px 0px;
+    margin: 0 60px 0 auto;
+}
+
+.course-number {
+    color: #E54360;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.course-title {
+    color: black;
+    font-size: 60px;
+    line-height: 65px;
+    font-weight: bold;
+}
+
+.course-details {
+    color: black;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 46px;
+}
+
+.course-ctas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.course-cta {
+    background-color: #E54360;
+    text-decoration: none;
+}
+
+.course-link {
+    padding: 16px 32px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    background: linear-gradient(#f75c79 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
+    transition: .4s, background-position 0s;
+}
+
+.course-link:hover {
+    --p: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.course-link:hover {
+    text-decoration: none;
+}
+
+.course-cta-secondary {
+    background-color: none;
+    text-decoration: none;
+    -webkit-box-shadow:inset 0px 0px 0px 2px #E54360;
+    -moz-box-shadow:inset 0px 0px 0px 2px #E54360;
+    box-shadow:inset 0px 0px 0px 2px #E54360;
+}
+
+.course-link-secondary {
+    padding: 16px 32px;
+    color: #E54360;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    background: linear-gradient(#E54360 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
+    transition: .4s, background-position 0s;
+}
+
+.course-link-secondary:hover {
+    --p: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
